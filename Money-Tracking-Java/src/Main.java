@@ -2,24 +2,23 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("=== TEST MATERI OOP SAMPAI CONSTRUCTOR OVERLOADING ===");
+       System.out.println("=== UJI COBA MATERI INHERITANCE ===");
 
-        Transaction trx1 = new Transaction();
-        trx1.type = "INCOME";               // <-- Pakai sama dengan (=)
-        trx1.amount = 1500000;              // <-- Pakai sama dengan (=)
-        trx1.description = "Gaji Bulanan";  // <-- Pakai sama dengan (=)
-        trx1.printInfo();
+        // 1. Membuat objek dari Child Class: IncomeTransaction
+        IncomeTransaction pemasukan = new IncomeTransaction();
+        // Bukti Inheritance: Kita bisa mengisi field amount & description walaupun tidak tertulis di file IncomeTransaction
+        pemasukan.amount = 3500000;
+        pemasukan.description = "Proyek kelar";
+        pemasukan.source = "Freelance Java"; // Field khusus milik kelas anak
+        pemasukan.printIncomeInfo();         // Method khusus milik kelas anak
 
-        // Memanggil Constructor 2 (Hanya 2 parameter)
-        Transaction trx2 = new Transaction("EXPENSE", 15000);
-        trx2.printInfo();
+        System.out.println("------------------------------------");
 
-        // Memanggil Constructor 3 (Lengkap 3 parameter)
-        Transaction trx3 = new Transaction("EXPENSE", 50000, "Beli Kuota Internet");
-        trx3.printInfo();
-
-        System.out.println("\n=== STATUS DATABASE ===");
-        // Class DatabaseConfig yang kemarin sudah aman, kita panggil di sini
-        DatabaseConfig.getConnection();
+        // 2. Membuat objek dari Child Class: ExpenseTransaction
+        ExpenseTransaction pengeluaran = new ExpenseTransaction();
+        pengeluaran.amount = 45000;
+        pengeluaran.description = "Makan siang gofood";
+        pengeluaran.category = "Makanan & Minuman"; // Field khusus milik kelas anak
+        pengeluaran.printExpenseInfo();             // Method khusus milik kelas anak
     }
 }
