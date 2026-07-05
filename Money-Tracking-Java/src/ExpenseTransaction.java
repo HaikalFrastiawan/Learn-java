@@ -1,9 +1,13 @@
 public class ExpenseTransaction extends Transaction {
-
     String category;
 
-    public void printExpenseInfo() {
-        System.out.println("[EXPENSE] Rp " + amount + " | Ket: " + description + " | Kategori: " + category);
+    // Menerapkan Method Overriding
+    @Override
+    public void printInfo() {
+        // Memanggil printInfo() milik Parent terlebih dahulu
+        super.printInfo(); 
+        
+        // Menambahkan info spesifik kategori pengeluaran
+        System.out.println("--> Kategori: " + category); 
     }
-    
 }

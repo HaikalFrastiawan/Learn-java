@@ -1,24 +1,27 @@
-
 public class Main {
-
     public static void main(String[] args) {
-       System.out.println("=== UJI COBA MATERI INHERITANCE ===");
+        System.out.println("=== UJI COBA OVERRIDING & SUPER ===");
 
-        // 1. Membuat objek dari Child Class: IncomeTransaction
+        // 1. Mencoba kelas anak: IncomeTransaction
         IncomeTransaction pemasukan = new IncomeTransaction();
-        // Bukti Inheritance: Kita bisa mengisi field amount & description walaupun tidak tertulis di file IncomeTransaction
-        pemasukan.amount = 3500000;
-        pemasukan.description = "Proyek kelar";
-        pemasukan.source = "Freelance Java"; // Field khusus milik kelas anak
-        pemasukan.printIncomeInfo();         // Method khusus milik kelas anak
+        pemasukan.type = "INCOME";
+        pemasukan.amount = 5000000;
+        pemasukan.description = "Gaji Project Akhir Bulan";
+        pemasukan.source = "Client Enterprise";
+        
+        // Panggil method yang sudah di-override
+        pemasukan.printInfo(); 
 
         System.out.println("------------------------------------");
 
-        // 2. Membuat objek dari Child Class: ExpenseTransaction
+        // 2. Mencoba kelas anak: ExpenseTransaction
         ExpenseTransaction pengeluaran = new ExpenseTransaction();
-        pengeluaran.amount = 45000;
-        pengeluaran.description = "Makan siang gofood";
-        pengeluaran.category = "Makanan & Minuman"; // Field khusus milik kelas anak
-        pengeluaran.printExpenseInfo();             // Method khusus milik kelas anak
+        pengeluaran.type = "EXPENSE";
+        pengeluaran.amount = 80000;
+        pengeluaran.description = "Beli Kopi Korek Api";
+        pengeluaran.category = "Kebutuhan Nongkrong";
+        
+        // Panggil method yang sudah di-override
+        pengeluaran.printInfo(); 
     }
 }
