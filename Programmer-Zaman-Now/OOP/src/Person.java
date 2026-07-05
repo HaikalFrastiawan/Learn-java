@@ -19,8 +19,8 @@ class Person {
 
     
     
-    void sayHello(String paramName) {
-        System.out.println("Hello " + paramName + ", my name is " + this.name);
+    void sayHello(String name) {
+        System.out.println("Hello " + name + ", my name is " + name);
     }
 }
 
