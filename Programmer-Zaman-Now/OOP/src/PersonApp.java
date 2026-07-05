@@ -15,7 +15,7 @@ public class PersonApp {
 
         Person person3;
         person3 = new Person();
-        person3.name = "Budi Santoso";
+        person3.name = "Siti";
         person3.sayHello("Budi");
 
     }

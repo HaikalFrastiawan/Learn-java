@@ -3,13 +3,12 @@ class Person {
     String address;
     final String country = "Indonesia"; 
     
-    Person(String paramName, String paramAddress) {
-        name = paramName;
-        address = paramAddress;
+    Person(String name, String address) {
+        this.name = name;
+        this.address = address;
     }
 
     Person(String paramName) {
-        // name = paramName;
         this(paramName, null); //method constructor chaining, memanggil constructor lain di dalam constructor yang sama
     }
 
@@ -20,7 +19,7 @@ class Person {
     
     
     void sayHello(String name) {
-        System.out.println("Hello " + name + ", my name is " + name);
+        System.out.println("Hello " + name + ", my name is " + this.name);
     }
 }
 
