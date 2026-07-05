@@ -1,19 +1,22 @@
 public class PersonApp {
     public static void main(String[] args) {
-        Person person = new Person();
-        person.name = "Eko";
-        person.address = "Subang";
 
-        Person person1 = new Person();
-        person1.name = "Budi";
-        person1.address = "Bandung";
+        var person1 = new Person("Eko", "Subang");
+        // person1.name = "Haikal";
+        // person1.address = "Bandung";
 
-        person.sayHello("Budi");
-        person1.sayHello("Eko");
+        System.out.println(person1.name);
+        System.out.println(person1.address);
+        System.out.println(person1.country);
 
-        System.out.println(person.name);
-        System.out.println(person.address);
-        System.out.println(person.country);
+        person1.sayHello("Budi");
+
+        Person person2 = new Person("Joko", "Jakarta");
+
+        Person person3;
+        person3 = new Person("Budi", "Depok");
+        // person3.name = "Budi Santoso";
+        
 
     
     }
