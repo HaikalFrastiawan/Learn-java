@@ -1,5 +1,8 @@
 class VicePresiden extends Manager{
     
+    VicePresiden(String name) {
+        super(name);
+    }
     // Overriding method
     @Override
     void SayHello(String name) {
