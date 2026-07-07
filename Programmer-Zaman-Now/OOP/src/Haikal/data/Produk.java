@@ -4,7 +4,7 @@ class Produk {
     String name;
     int price;
 
-    Product (String name,int price){
+    Produk(String name,int price){
         this.name = name;
         this.price = price;
     }
