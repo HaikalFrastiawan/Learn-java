@@ -1,10 +1,10 @@
 package Haikal.data;
 
-class Produk {
-    String name;
-    int price;
+public class Produk {
+    public String name;
+    public int price;
 
-    Produk(String name,int price){
+    public Produk(String name,int price){
         this.name = name;
         this.price = price;
     }
