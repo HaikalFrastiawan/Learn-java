@@ -1,6 +1,6 @@
 package Haikal.data;
 
-public interface Car {
+public interface Car extends HashBrand,IsMaintentance  {
 
     void drive();
 
