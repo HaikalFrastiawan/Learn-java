@@ -5,6 +5,8 @@ public class ProdukApp {
         Produk produk = new Produk("mac book", 50000);
         System.out.println(produk.name);
         System.out.println(produk.price);
+
+        System.out.println(produk);
     }
 
 
