@@ -5,8 +5,13 @@ package Haikal.data;
 }
 
 //tidak bisa di turunkan
-final class Facebook extends SocialMedia {
+ class Facebook extends SocialMedia {
+     final void login(String username, String password){
 
+     }
+}
+class FakeFacebook extends  Facebook{
+     //error klo void loginnya final
 }
 
 //class FakeFacebook extends Facebook{} //error
